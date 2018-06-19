@@ -19,3 +19,44 @@ Convolutional Neural Networks have become an imortant tool for object recognitio
 <br>
 
 ## Image Classification
+ * Challenges: 
+  * Viewpoint variation 
+  * Illumination (light) 
+  * Deformation (shape)
+  * Occlusion (part)
+  * Background clutter
+  * Intraclass variation (different appeareance)
+  
+ * Data-driven approach:
+  * Collect the dataset of images and labels
+  * Use Machine Learning to train a classifier
+  * Evaluate the classifier on new images
+  
+ * Data Matric
+ 
+ * K-Nearest Neighbors
+ 
+ * Setting Hyperparameters
+  * #4 Cross-validation
+  
+ * Linear Classification
+  * f(x,W) = Wx+b     W is the weight matrix (col: numn of pixel; row: num of classification)
+  * only learn one template of the object
+
+<br>
+
+## CNN for Visual Recognition
+
+* Loss function
+
+* regularization
+
+* Softmax Classifier (Multinomial Logistic Regression)
+
+* Optimization
+ * set the step size and learning rate
+
+## Neural Network for Visual Recognition
+* backpropagation (the computational graph - calculate the gradiant)
+
+ 
