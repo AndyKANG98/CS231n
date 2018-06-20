@@ -20,28 +20,28 @@ Convolutional Neural Networks have become an imortant tool for object recognitio
 
 ## Image Classification
  * Challenges: 
-  * Viewpoint variation 
-  * Illumination (light) 
-  * Deformation (shape)
-  * Occlusion (part)
-  * Background clutter
-  * Intraclass variation (different appeareance)
+   * Viewpoint variation 
+   * Illumination (light) 
+   * Deformation (shape)
+   * Occlusion (part)
+   * Background clutter
+   * Intraclass variation (different appeareance)
   
  * Data-driven approach:
-  * Collect the dataset of images and labels
-  * Use Machine Learning to train a classifier
-  * Evaluate the classifier on new images
+   * Collect the dataset of images and labels
+   * Use Machine Learning to train a classifier
+   * Evaluate the classifier on new images
   
  * Data Matric
  
  * K-Nearest Neighbors
  
  * Setting Hyperparameters
-  * #4 Cross-validation
+   * #4 Cross-validation
   
  * Linear Classification
-  * f(x,W) = Wx+b     W is the weight matrix (col: numn of pixel; row: num of classification)
-  * only learn one template of the object
+   * f(x,W) = Wx+b     W is the weight matrix (col: numn of pixel; row: num of classification)
+   * only learn one template of the object
 
 <br>
 
@@ -54,9 +54,77 @@ Convolutional Neural Networks have become an imortant tool for object recognitio
 * Softmax Classifier (Multinomial Logistic Regression)
 
 * Optimization
- * set the step size and learning rate
+  * set the step size and learning rate
 
 ## Neural Network for Visual Recognition
 * backpropagation (the computational graph - calculate the gradiant)
 
- 
+## Convolutional Neural Networks for Visual Recognition
+very useful in classification; object detection (bounding box); Image caption; Art work
+
+1. Convolutional Layer
+filters are feature identidiers to describe the image
+Output size: (N - F)/stride + 1
+
+2. Pooling laeyr 
+ makes the representation smaller and managebal
+ operates over each activation map individually
+3. Fully Connected layer
+out put a N dimentional output
+
+## Train Nerual Networks
+* Activation Function (reLu)
+* Weight Initialization
+* Preprocess the data
+* Babysitting Learning
+* Hyper parameter Search
+* Optimization (SGD, Momentum, AdaGrad, RMSProp)
+* Regularzation (Data augmentation)
+* Transfer Learning
+
+## Hardware and Software
+* CPU, GPU, TPU
+* PyTorch (version 0.4) - Like a numpy array, but can tun on GPU; easy to develop and debug 
+* Tensorflow - High-Level Wrappers
+
+## Cases
+Case Studies
+- AlexNet
+- VGG
+- GoogLeNet
+- ResNet
+Also....
+- NiN (Network in Network)
+- Wide ResNet
+- ResNeXT
+- Stochastic Depth
+- Squeeze-and-Excitation Network
+- DenseNet
+- FractalNet
+- SqueezeNet
+- NASNet
+
+## Recurrent Neural Network
+* ht - Fw(ht-1, xt)  from the old state to the new state (feedback to itself with the input)
+* Language
+* Image Caption 
+
+## Detection and Segmentation
+* Semantic segmentation
+ * sliding window (super computational expensive)
+ * Fully convolutional layer (The training data is very expensive)
+   * design network as a bunch of convolutional layers, with downsampling and **upsampling** inside the network 
+     * upsampling: "Unpooling" "Transpose Convolution"
+
+* Classification + Localization
+  * Treate localization as a regression problem - multi-task loss
+
+* Object Detection
+  * Sliding Window
+  * Region Proposal - apply CNN to each region - SVM (R-CNN)
+  * Fast R-CNN - "Rol Pooling"
+  * **Faster R-CNN - make CNN do proposal (Region based)**
+  * **YOLO/SSD** (single shot)
+
+* Instance Segmentation
+  * Mask R-CNN
