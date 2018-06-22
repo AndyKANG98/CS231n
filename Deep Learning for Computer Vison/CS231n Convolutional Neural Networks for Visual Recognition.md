@@ -145,13 +145,13 @@ Also....
     * Softmax +　BBox Reg做 N+1 Classification（看一下是不是一个Objecty以及是哪一个物体）
     * 再做一层Multiscale
     
-    1. 默认边界框（锚框anchor box）
-    给定大小s in (0,1]，生成的边框形状是ws * hs
-    给定比例 r > 0，生成的边框形状是 w(r)^(1/2) * h/(r)^(1/2)
-    
-    在采集样本的时候n个大小和m个比例，简化计算我们只生成n+m-1
-    * size[i] 和 rationa[0] if i <= n
-    * size[0] 和 ration[i-n] if i > n
+    1. 默认边界框（锚框anchor box） 
+    > 给定大小s in (0,1]，生成的边框形状是ws * hs <br>
+    > 给定比例 r > 0，生成的边框形状是 w(r)^(1/2) * h/(r)^(1/2) <br>
+
+    > 在采集样本的时候n个大小和m个比例，简化计算我们只生成n+m-1 <br>
+    > size[i] 和 rationa[0] if i <= n <br>
+    > size[0] 和 ration[i-n] if i > n <br>
     
     2. 定义Sofemax and BBox Regression
     3. 预测物体类别
@@ -160,7 +160,7 @@ Also....
     6. 减半模块
     7. 主体网络
     8. 完整的模型
-    Tutorial from [GLUNO](http://zh.gluon.ai/chapter_computer-vision/ssd.html#)
+    * Tutorial from [GLUNO](http://zh.gluon.ai/chapter_computer-vision/ssd.html#)
     
 * Instance Segmentation
   * Mask R-CNN
